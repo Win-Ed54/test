@@ -8,9 +8,9 @@
         padding: 20px;
         text-align: center;
     }
-
-    #historia p{
-        text-align: center;
+    
+    header{
+        position:relative;
     }
 
     .img-centrada {
@@ -50,7 +50,7 @@
     }
 
     /* Imágenes */
-    .img {
+    img {
         display: block;
         margin: 20px auto;
         border: 3px solid #333;
@@ -139,6 +139,7 @@ input:focus {
 }
 @media (max-width: 768px) {
     .nav-links {
+        z-index: 100;
         display: flex; /* Ahora siempre es flex */
         flex-direction: column;
         width: 100%;
