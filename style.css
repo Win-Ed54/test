@@ -138,21 +138,29 @@ input:focus {
     border-radius: 2px;
 }
 @media (max-width: 768px) {
-    .hamburguesa { display: flex; } /* Aparece el icono */
-
     .nav-links {
-        display: none; /* Ocultamos los links por defecto */
+        display: flex; /* Ahora siempre es flex */
         flex-direction: column;
         width: 100%;
-        background: #1a1f29;
+        background: rgba(26, 31, 41, 0.95); /* Un poco de transparencia */
         position: absolute;
-        top: 60px;
+        top: 70px;
         left: 0;
         padding: 20px;
+        
+        /* ESTADO INICIAL (Oculto y movido hacia arriba) */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        
+        /* LA MAGIA: Animación de 0.4 segundos */
+        transition: all 0.4s ease-in-out;
     }
 
-    /* EL TRUCO: Si el checkbox está marcado (~), muestra la lista */
+    /* CUANDO EL CHECKBOX ESTÁ MARCADO */
     #menu-check:checked ~ .nav-links {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0); /* Vuelve a su posición original */
     }
 }
