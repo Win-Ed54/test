@@ -1,0 +1,158 @@
+    /* Estilo General */
+    body {
+        background-color: #0b0e14; /* Un azul oscuro espacial */
+        color: #e0e0e0;           /* Texto gris claro para que no canse la vista */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #historia p{
+        text-align: center;
+    }
+
+    .img-centrada {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        max-width: 600px;
+    }
+
+
+    /* El Título Principal */
+    h1 {
+        color: #00ffcc; /* Un color neón cian */
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    /* Navegación */
+    nav ul {
+        list-style: none; /* Quitamos los puntitos */
+        padding: 0;
+        display: flex;    /* Ponemos los elementos uno al lado del otro */
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav a {
+        color: #ff00ff; /* Rosa neón */
+        text-decoration: none; /* Quitamos el subrayado */
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #00ffcc; /* Cambia de color al pasar el mouse */
+    }
+
+    /* Imágenes */
+    .img {
+        display: block;
+        margin: 20px auto;
+        border: 3px solid #333;
+        border-radius: 10px; /* Bordes redondeados */
+        max-width: 100%;    /* Se adapta a la pantalla */
+    }
+
+    /* El Botón de Acción */
+    button {
+        background-color: #00ffcc;
+        color: #0b0e14;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer;
+        display: block;
+        margin: 40px auto;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+        transform: scale(1.1); /* Se hace un poco más grande */
+        box-shadow: 0 0 20px #00ffcc; /* Efecto de brillo */
+    }
+
+    /* Estilo del contenedor del formulario */
+.formulario-registro {
+    max-width: 500px;
+    margin: 40px auto; /* Centramos el formulario completo */
+    background: #1a1f29;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #00ffcc;
+}
+
+/* Usamos Flexbox para alinear label e input */
+.grupo-input {
+    display: flex;
+    flex-direction: column; /* Apila el texto arriba del cuadro */
+    margin-bottom: 20px;
+    text-align: left; /* Alineamos el texto a la izquierda */
+}
+
+/* Estilo para los cuadros de texto y selects */
+input, select {
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #0b0e14;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Efecto cuando el usuario hace clic para escribir */
+input:focus {
+    outline: none;
+    border-color: #ff00ff; /* Cambia a rosa neón al escribir */
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+/* Personalizamos el botón dentro del formulario */
+.btn-enviar {
+    width: 100%; /* Que ocupe todo el ancho del formulario */
+    margin-top: 10px;
+}
+
+/* Ocultamos el checkbox real */
+#menu-check { display: none; }
+
+/* Estilo del botón hamburguesa (solo se verá en móvil) */
+.hamburguesa {
+    display: none; /* Oculto en PC */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburguesa span {
+    width: 30px;
+    height: 4px;
+    background: #00ffcc;
+    border-radius: 2px;
+}
+@media (max-width: 768px) {
+    .hamburguesa { display: flex; } /* Aparece el icono */
+
+    .nav-links {
+        display: none; /* Ocultamos los links por defecto */
+        flex-direction: column;
+        width: 100%;
+        background: #1a1f29;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px;
+    }
+
+    /* EL TRUCO: Si el checkbox está marcado (~), muestra la lista */
+    #menu-check:checked ~ .nav-links {
+        display: flex;
+    }
+}

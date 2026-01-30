@@ -4,8 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!--El encabezado con el titulo y menu-->
+    <header>
+        <h1>Space Survivor</h1>
+         <nav>
+        <!-- Este es el truco: un checkbox que controlará el menú -->
+        <input type="checkbox" id="menu-check">
+        
+        <!-- El icono de las 3 rayitas -->
+        <label for="menu-check" class="hamburguesa">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Registro</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+        <!--Seccion Principal-->
+        <section id="historia">
+            <h2>Sobre el Juego</h2>
+            <p>Eres el ultimo piloto de la flota. Sobrevive en el sector 7 contra hordas de alienigenas. ! la humanidad cuenta contigo ! </p>
+
+            <!-- Aquí iría una imagen de tu juego-->
+             <img src="image (1).png" alt="Captura de pantalla del videojuego" class="img-centrada">
+        </section>
+
+        <!--Seccíon de Características -->
+        <section>
+            <h2>Características Principales</h2>
+            <ul>
+                <li><strong>Gráficos Pixel Art:</strong> Estilo retro de 16 bits</li>
+                <li><strong>Multiplicadores:</strong> ¡Consigue combos épicos!</li>
+                <li><strong>Gráficos Pixel Art:</strong> Banda sonora Synthwave original.</li>
+            </ul>
+        </section>
+
+        <!--Boton de Accion-->
+        <section>
+            <h3>¿Listo para la batalla?</h3>
+            <button type="button" onclick="alert('¡Descarga Iniciada!')">
+                DESCARGAR AHORA
+            </button>
+        </section>
+
+        <section id="contacto">
+    <h2>Registro de Pilotos</h2>
+    <form class="formulario-registro">
+        <div class="grupo-input">
+            <label for="piloto">Nombre de Piloto:</label>
+            <input type="text" id="piloto" placeholder="Ej. SkyWalker_7" required>
+        </div>
+
+        <div class="grupo-input">
+            <label for="email">Correo Galáctico:</label>
+            <input type="email" id="email" placeholder="nombre@imperio.com" required>
+        </div>
+
+        <div class="grupo-input">
+            <label for="clase">Clase de Nave:</label>
+            <select id="clase">
+                <option value="caza">Caza Ligero</option>
+                <option value="bombardero">Bombardero Pesado</option>
+                <option value="exploradora">Nave Exploradora</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-enviar">Unirse a la Flota</button>
+    </form>
+</section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Desarrollado por Edwin Fernandez y Github.</p>
+    </footer>
 </body>
 </html>
